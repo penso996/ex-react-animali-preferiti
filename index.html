@@ -4,20 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
     <title>I miei animali Preferiti</title>
     <link rel="stylesheet" href="style.css">
+    <!-- React, ReactDOM, Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- script -->
+    <script type="text/babel">
+        const ListaAnimali = () => {
+
+            const animals = ["cane", "gatto", "pappagallo"]
+
+            return (
+                <>
+                    <details>
+                        <summary>Animali</summary>
+                        <ul>
+                            {animals.map((animal, index) => (
+                                <li key={index}>{animal}</li>
+                            ))}
+                        </ul>
+                    </details>
+                </>
+            )
+        }
+    </script>
 </head>
 
 <body>
+    <!-- header -->
     <header>
         <h1>I miei animali Preferiti</h1>
     </header>
+    <!-- main -->
     <main>
         <figure>
             <img src="https://picsum.photos/400/300" alt="Immagine Casuale">
         </figure>
         <div class="lista-animali"></div>
     </main>
+    <!-- footer -->
     <footer>
         <p>Creato con amore da... un collega sbadato! 🐾</p>
     </footer>
