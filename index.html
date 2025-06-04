@@ -16,22 +16,27 @@
     <script type="text/babel">
         const ListaAnimali = () => {
 
-            const animals = ["cane", "gatto", "pappagallo"]
+            const animali = ["cane", "gatto", "pappagallo"]
 
             return (
-                <>
-                    <details>
-                        <summary>Animali</summary>
-                        <ul>
-                            {animals.map((animal, index) => (
-                                <li key={index}>{animal}</li>
-                            ))}
-                        </ul>
-                    </details>
-                </>
+                <details>
+                    <summary>Animali</summary>
+                    <ul>
+                        {animali.map((animale, index) => (
+                            <li key={index}>{animale}</li>
+                        ))}
+                    </ul>
+                </details>
             )
         }
     </script>
+    <script type="text/babel">
+        const { createRoot } = ReactDOM;
+        const listaAnimali = document.querySelector(".lista-animali");
+        const root = createRoot(listaAnimali);
+        root.render(<ListaAnimali />)
+    </script>
+
 </head>
 
 <body>
